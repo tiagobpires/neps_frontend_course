@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>First Vue App</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>Hello, {{ name.toUpperCase() }}!</h1>
+    </div>
+    <script>
+        const { createApp, ref } = Vue;
+
+        const app = createApp({
+            setup() {
+                const name = ref('World');
+                window.nameRef = name;
+                return { name };
+            }
+        });
+
+        app.mount('#app');
+    </script>
+</body>
+
+</html>
