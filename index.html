@@ -3,25 +3,33 @@
 
 <head>
     <meta charset="utf-8">
-    <title>First Vue App</title>
+    <title>Vue Functionalities</title>
+    <!-- Import Vue.js -->
     <script src="https://unpkg.com/vue@3"></script>
 </head>
 
 <body>
     <div id="app">
-        <h1>Hello, {{ name.toUpperCase() }}!</h1>
+        <ul>
+            <li v-for="(todo, index) in todos" :key="index">{{ todo }}</li>
+        </ul>
+
     </div>
+
+    <!-- Vue app -->
     <script>
         const { createApp, ref } = Vue;
 
         const app = createApp({
             setup() {
-                const name = ref('World');
-                window.nameRef = name;
-                return { name };
+                const todos = ref([
+                    'Finish Frontend course',
+                    'Dominate the world'
+                ]);
+                return { todos };
             }
-        });
 
+        });
         app.mount('#app');
     </script>
 </body>
