@@ -1,0 +1,72 @@
+@forward "variables";
+@use "variables" as *;
+
+html {
+  background: linear-gradient(to bottom right, rgba(10, 10, 10, 1), rgba(12, 39, 63, 1)) no-repeat
+    center center fixed !important;
+
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: $text-primary;
+  padding-bottom: 100px;
+
+  p {
+    color: $background-secondary;
+  }
+}
+
+// Inputs and Forms
+
+textarea {
+  display: block;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: $background-light;
+  border: 1px solid $border-default;
+
+  // Fix based on https://stackoverflow.com/questions/271067/how-can-i-make-a-textarea-100-width-without-overflowing-when-padding-is-present
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  color: $text-primary;
+}
+
+button {
+  background: $background-attention;
+  color: $text-on-primary;
+  border: none;
+  padding: 10px;
+  width: 200px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+input {
+  display: block;
+  margin-bottom: 15px;
+  height: 25px;
+  width: 100%;
+  border-radius: 4px;
+  border-width: 1px;
+  padding: 20px;
+  font-size: 1rem;
+  background-color: $background-light;
+  border: 1px solid $border-default;
+
+  // Fix based on https://stackoverflow.com/questions/271067/how-can-i-make-a-textarea-100-width-without-overflowing-when-padding-is-present
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  color: $text-primary;
+}
