@@ -38,6 +38,18 @@ nav {
   img {
     height: 60px;
   }
+
+  @media only screen and (max-width: 481px) {
+    padding: 5px;
+
+    img {
+      height: 30px;
+    }
+
+    a {
+      font-size: 0.9rem;
+    }
+  }
 }
 
 .view {
