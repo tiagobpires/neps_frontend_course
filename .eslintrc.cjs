@@ -2,6 +2,10 @@
 require("@rushstack/eslint-patch/modern-module-resolution");
 
 module.exports = {
+  env: {
+    node: true, // Informa ao ESLint que estamos no ambiente Node.js
+    commonjs: true // Permite o uso do sistema de módulos CommonJS (como require e module.exports)
+  },
   root: true,
   extends: [
     "plugin:vue/vue3-essential", // Regras essenciais para Vue 3
