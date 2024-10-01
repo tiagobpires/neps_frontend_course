@@ -1,24 +1,24 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
-# aborta em caso de erros
+# Parar o script se ocorrer algum erro
 set -e
 
-# cria o build
+# Build do projeto
 npm run build
 
-# navega para o diretório de saída do build
+# Acessar o diretório de build
 cd dist
 
-# inicializa um novo repositório git e faz commit
+# Inicializar um repositório Git (caso não exista)
 git init
-git add -A
-git commit -m 'deploy'
 
-# define a branch como gh-pages
-git branch -M gh-pages
+# Verificar se a branch gh-pages já existe localmente, e se não, criar a branch
+git checkout -B gh-pages
 
-# configura o repositório remoto e empurra as mudanças
-git push -f git@github.com:tiagobpires/neps_frontend_course.git master:gh-pages
+# Forçar o push para a branch gh-pages do repositório remoto, mesmo que não haja novas mudanças
+git push -f git@github.com:tiagobpires/neps_frontend_course.git gh-pages
 
-# volta para o diretório anterior
+# Voltar para o diretório anterior
 cd -
+
+echo "Deploy finalizado!"
