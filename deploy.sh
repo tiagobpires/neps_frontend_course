@@ -19,7 +19,7 @@ git checkout -B gh-pages
 git add -A
 
 # Fazer o commit com uma mensagem de deploy
-git commit -m "Deploy do Vue para GitHub Pages"
+git commit -m "Deploy"
 
 # Forçar o push para a branch gh-pages do repositório remoto
 git push -f git@github.com:tiagobpires/neps_frontend_course.git gh-pages
