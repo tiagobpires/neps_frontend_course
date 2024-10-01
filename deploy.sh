@@ -15,7 +15,13 @@ git init
 # Verificar se a branch gh-pages já existe localmente, e se não, criar a branch
 git checkout -B gh-pages
 
-# Forçar o push para a branch gh-pages do repositório remoto, mesmo que não haja novas mudanças
+# Adicionar todos os arquivos
+git add -A
+
+# Fazer o commit com uma mensagem de deploy
+git commit -m "Deploy do Vue para GitHub Pages"
+
+# Forçar o push para a branch gh-pages do repositório remoto
 git push -f git@github.com:tiagobpires/neps_frontend_course.git gh-pages
 
 # Voltar para o diretório anterior
